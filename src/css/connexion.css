@@ -1,0 +1,81 @@
+
+* {
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: .5px;
+    margin: 20px 0 30px;
+    color: #0a92d1;
+}
+
+
+
+a {
+    color: rgb(14, 47, 146);
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+input {
+	width: 70%;
+	height: 30px;
+	padding-left: 3%;
+	border-width: 1px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+form {
+    font-size: small;
+    background-color: #cccccc;
+    padding:  40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+    margin-top: 0,8cm;
+    margin: auto;
+    flex-direction: column;
+    min-height: 30px;
+    height: 350px;
+}
+
+button {
+    border: white 1px solid;
+    border-radius: 5px;
+    background: #0a92d1;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+    position: relative;
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background: transparent;
+    border-color: #fff;
+}
+
+button:hover {
+    background-color: #8092f5;
+    color: #fff;
+}
