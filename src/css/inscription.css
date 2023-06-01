@@ -1,0 +1,104 @@
+fieldset {
+	top: 25px;
+	width: 30%;
+	border: 0px;
+	margin: auto;
+	height: 490px;
+	border-radius: 3%;
+    position: relative;
+	text-align: center;
+	background-color: #ffffff;
+}
+
+h1 {
+	font-size: 160%;
+	font-weight: bold;
+	color: rgb(54, 54, 54);
+}
+
+input {
+	width: 70%;
+	height: 30px;
+	padding-left: 3%;
+	border-width: 1px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+input:focus + label {
+	font-size: 80%;
+	margin-top: -1.5%;
+	background-color: #ffffff;
+}
+input:not(:placeholder-shown) + label {
+	font-size: 80%;
+	margin-top: -1.5%;
+	background-color: #ffffff;
+}
+
+label {
+	left: 18%;
+	color: grey;
+	font-size: 95%;
+	transition: .3s;
+	margin-top: 8px;
+	position: absolute;
+	pointer-events: none;
+}
+#label {
+	left: 60%;
+}
+
+#motdepasse {
+	width: 37%;
+	margin-right: 2%;
+}
+
+#classe {
+	width: 27%;
+}
+
+#motdepasse2 {
+	width: 37%;
+	margin-right: 2%;
+}
+
+#numeroClasse {
+	width: 27%;
+}
+
+button {
+	width: 30%;
+	height: 40px;
+	border: 0px;
+	border-radius: 10px;
+	transition: .5s;
+	background-color: rgb(3, 170, 253);
+	box-shadow: 0 6px rgb(189, 189, 189);
+}
+
+button:hover {
+	width: 74%;
+	cursor: pointer;
+	background-color: rgb(0, 143, 214);
+}
+
+button:active {
+	transform: translateY(3px);
+	box-shadow: 0 1px rgb(189, 189, 189);
+}
+
+#phraseCnx {
+	top: 0px;
+	font-size: 100%;
+	margin-top: 20px;
+	color: rgb(94, 94, 94);
+}
+
+#lienCnx {
+	font-weight:bold;
+	transition: 1s;
+	color:rgb(3, 170, 253);
+}
+#lienCnx:hover {
+	font-size: 130%;
+}
