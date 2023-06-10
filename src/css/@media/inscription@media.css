@@ -1,0 +1,60 @@
+@media screen and (min-width:900px) {
+    .fieldset_Inscription {
+		width: 400px;
+	}
+
+	.input_Inscription {
+		width: 70%;
+	}
+	.motdepasse , .motdepasse2{
+		display: flex;
+		margin-left: 13%;
+		width: 37%;
+	}
+	.classe{
+		margin-top: -27%;
+	}
+	.classe ,
+	.numeroClasse{
+		display: flex;
+		width: 27%;
+		margin-left: 56%;
+	}
+	
+
+	.label_Inscription {
+		left: 20%;
+		font-size: 80%;
+	}
+	.label_Inscription_motdepasse ,
+	.label_Inscription_classe{
+		margin-top: -10%;
+	}
+	.label_Inscription_classe {
+		left: 60%;
+	}
+
+	.input_Inscription:focus + .label_Inscription ,
+	.input_Inscription:not(:placeholder-shown) + .label_Inscription {
+		left: 18%;
+		font-size: 80%;
+		margin-top: -1.5%;
+	}
+	.input_Inscription:focus + .label_Inscription_motdepasse ,
+	.input_Inscription:focus + .label_Inscription_classe ,
+	.input_Inscription:not(:placeholder-shown) + .label_Inscription_motdepasse ,
+	.input_Inscription:not(:placeholder-shown) + .label_Inscription_classe {
+		margin-top: -14.3%;
+	}
+	.input_Inscription:focus + .label_Inscription_classe ,
+	.input_Inscription:not(:placeholder-shown) +.label_Inscription_classe {
+		left: 58%;
+	}
+
+	.button_Inscription {
+		width: 40%;
+	}
+	.button_Inscription:hover {
+		width: 84%;
+	}
+}

@@ -1,0 +1,9 @@
+@media screen and (max-width:900px) {
+    .bouton_Navigation {
+        font-size: 16px;
+        padding: 8px 5%;
+    }
+    .bouton_Navigation:active {
+        font-size: 15px;
+    }
+}

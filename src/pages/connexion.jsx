@@ -1,5 +1,8 @@
-import './css/connexion.css'
+                      //Importation des scripts react
 import React, { Component } from 'react'
+
+                      //Importation css
+//import '../css/connexion.css'
 
 class Connexion extends Component {
     constructor(props) {
@@ -26,7 +29,6 @@ class Connexion extends Component {
                 <p><b>Connexion</b></p>
                 <input type="email" placeholder="Entrer votre adresse mail" name="email"  onChange={this.changementDonnee}  required></input>
                 <input type="password" placeholder="Entrer votre mot de passe" name="motDePasse"   onChange={this.changementDonnee} required></input>
-                <h2></h2>
                 <button id="btnConnex" name="valider" type="submit" onmouseover="btnBouge()">Se Connecter</button>
                 </form>
             </fieldset>
