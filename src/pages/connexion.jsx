@@ -1,5 +1,6 @@
                       //Importation des scripts react
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 
                       //Importation css
 //import '../css/connexion.css'
@@ -30,6 +31,9 @@ class Connexion extends Component {
                 <input type="email" placeholder="Entrer votre adresse mail" name="email"  onChange={this.changementDonnee}  required></input>
                 <input type="password" placeholder="Entrer votre mot de passe" name="motDePasse"   onChange={this.changementDonnee} required></input>
                 <button id="btnConnex" name="valider" type="submit" onmouseover="btnBouge()">Se Connecter</button>
+                <Link to="/inscription">
+                    <button>Inscription</button>
+                </Link>
                 </form>
             </fieldset>
     }

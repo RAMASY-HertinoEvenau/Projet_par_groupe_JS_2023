@@ -54,7 +54,7 @@
 .button_Inscription:hover {
 	width: 84%;
 	cursor: pointer;
-	background-color: rgb(0, 143, 214);
+	background-color: rgb(0, 153, 230);
 }
 .button_Inscription:active {
 	transform: translateY(3px);

@@ -16,8 +16,10 @@ class Inscription extends Component {
             motDePasse2: '',
             classe: '',
             numeroClasse: '',
-            matricule: ''
+            matricule: '',
         };
+        this.changementDonnee = this.changementDonnee.bind(this);
+        this.envoieFormulaire = this.envoieFormulaire.bind(this);
     }
 
     //Sous programme qui ecoute les modifications dans les champs input
@@ -29,11 +31,26 @@ class Inscription extends Component {
     //Sous progamme qui envoie les données du formulaire
     envoieFormulaire = (event) => {
         event.preventDefault();
-        //Retourne 1 si tous les données sont correcte
-        const n = this.verifieDonnee();
-        if(n === 1) {
-            console.log(this.state);
+        let n = 0;
+        if(this.state.nom !== Number) {
+            alert('Votre nom ne doit pas contenir un chiffre');
         }
+        else if(this.state.numeroTel < 300000000 || this.state.numeroTel > 399999999) {
+            alert('Veuillez entrer un nméro de téléphone valide');
+        }
+        else if(this.state.motDePasse !== this.state.motDePasse2) {
+            alert('Le mot de passe et le mot de passe de confirmation sont différents');
+        }
+        else if(this.state.matricule > 999999) {
+            alert('Votre numéro de matricule est invalide');
+        }
+        else {
+            n = 1;
+        }
+        if(n === 0) {
+            return false;
+        }
+        alert('Formulaire envoyé');
     }
 
     //Sous programme qui valide que tous les champs sont bien correcte
@@ -47,24 +64,81 @@ class Inscription extends Component {
     }
 
     render () {
+        //Rendue à l'affichage
         return <fieldset className='fieldset_Inscription' onLoad={this.affichage}>
-                <form onSubmit={this.envoieFormulaire}>
+                <form onSubmit={this.envoieFormulaire} autoComplete="false">
                     <h1 className='h1_Inscription'>Inscription</h1>
-                    <input type='text' className='input_Inscription'name='nomPrenom' onChange={this.changementDonnee}  placeholder=' ' required/>
+                    <input
+                        required 
+                        type='text'
+                        placeholder=' '
+                        name='nomPrenom'
+                        className='input_Inscription nom'
+                        onChange={this.changementDonnee}
+                    />
                     <label className='label_Inscription'>Nom et Prénom</label>
-                    <input type='email' className='input_Inscription' name='email' onChange={this.changementDonnee} placeholder=' ' required/>
+                    <input
+                        required 
+                        type='email'
+                        name='email'
+                        placeholder=' '
+                        className='input_Inscription'
+                        onChange={this.changementDonnee}
+                    />
                     <label className='label_Inscription'>E-mail</label>
-                    <input type='number' className='input_Inscription' name='numeroTel' onChange={this.changementDonnee} placeholder=' ' required/>
+                    <input
+                        required 
+                        type='number'
+                        placeholder=' '
+                        name='numeroTel'
+                        className='input_Inscription'
+                        onChange={this.changementDonnee}
+                    />
                     <label className='label_Inscription'>Numéro de téléphone</label>
-                    <input type='password' className='input_Inscription motdepasse' name='motDePasse' onChange={this.changementDonnee} placeholder=' ' required/>
+                    <input
+                        required 
+                        type='password'
+                        placeholder=' '
+                        name='motDePasse'
+                        onChange={this.changementDonnee}
+                        className='input_Inscription motdepasse'
+                    />
                     <label className='label_Inscription label_Inscription_motdepasse'>Mot de passe</label>
-                    <input type='password' className='input_Inscription motdepasse2' name='motDePasse2' onChange={this.changementDonnee} placeholder=' ' required/>
+                    <input
+                        required
+                        type='password'
+                        placeholder=' '
+                        name='motDePasse2'
+                        onChange={this.changementDonnee}
+                        className='input_Inscription motdepasse2'
+                    />
                     <label className='label_Inscription label_Inscription_motdepasse'>Confirmer mot de passe</label>
-                    <input type='text' className='input_Inscription classe' name='classe' onChange={this.changementDonnee} placeholder=' ' required/>
+                    <input
+                        required
+                        type='text'
+                        name='classe'
+                        placeholder=' '
+                        onChange={this.changementDonnee}
+                        className='input_Inscription classe'
+                    />
                     <label className='label_Inscription label_Inscription_classe'>Classe</label>
-                    <input type='number' className='input_Inscription numeroClasse' name='numeroClasse' onChange={this.changementDonnee} placeholder=' ' required/>
+                    <input
+                        required
+                        type='number'
+                        placeholder=' '
+                        name='numeroClasse'
+                        onChange={this.changementDonnee}
+                        className='input_Inscription numeroClasse'
+                    />
                     <label className='label_Inscription label_Inscription_classe'>Numéro classe</label>
-                    <input type='number' className='input_Inscription' name='matricule' onChange={this.changementDonnee} placeholder=' ' required/>
+                    <input
+                        required
+                        type='number'
+                        placeholder=' '
+                        name='matricule'
+                        className='input_Inscription'
+                        onChange={this.changementDonnee}
+                    />
                     <label className='label_Inscription'>Numéro de matricule</label>
                     <button type='submit' className='button_Inscription'>S'inscrire</button>
                     <p className='phraseCnx'>Vous avez déjà un compte? <Link to="/connexion" className='lienCnx'>Connexion</Link></p>
