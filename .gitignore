@@ -1,6 +1,6 @@
 #-----------------Dossier
 node_modules/
 .vscode/
-Icon/
+build/
 
 #-----------------Fichier

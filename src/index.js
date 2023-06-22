@@ -17,9 +17,10 @@ import Navigation from '../src/composant/navigation';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename="/Projet_par_groupe_JS_2023">
     <Navigation/>
     <Routes>
+      <Route path="/Projet_par_groupe_JS_2023" element={<Acceuil/>}/>
       <Route path="/" element={<Acceuil/>}/>
       <Route path="/inscription" element={<Inscription/>}/>
       <Route path="/connexion" element={<Connexion/>}/>
