@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>E-Learning</title>
+    <script type="text/javascript">
+      // Applications monopage pour les pages GitHub
+      // MIT License
+      // https://github.com/RAMASY-HertinoEvenau/Projet_par_groupe_JS_2023.git
+      // Ce script prend l’URL actuelle et convertit le chemin d’accès et la requête
+      // chaîne dans une simple chaîne de requête, puis redirige le navigateur
+      // à la nouvelle URL avec uniquement une chaîne de requête et un fragment de hachage,
+      // par exemple: https://www.foo.tld/one/two?a=b&c=d#qwe, devient
+      // https://www.foo.tld/?/one/two&a=b~and~c=d#qwe
+      // Remarque: ce fichier 404.html doit être d’au moins 512 octets pour fonctionner
+      // avec Internet Explorer (il est actuellement > 512 octets)
+
+      // Si vous créez un site Project Pages et que vous n’utilisez PAS de domaine personnalisé,
+      // puis définissez pathSegmentsToKeep sur 1 (les utilisateurs d’entreprise devront peut-être 
+      // le définir sur > 1).
+      // De cette façon, le code ne remplacera que la partie route du chemin, et non
+      // Le répertoire réel dans lequel réside l’application, par exemple :
+      // https://username.github.io/repo-name/one/two?a=b&c=d#qwe devient
+      // https://username.github.io/repo-name/?/one/two&a=b~and~c=d#qwe
+      // Sinon, laissez pathSegmentsToKeep sur 0.
+      var pathSegmentsToKeep = 1;
+
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
